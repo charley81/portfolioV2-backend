@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "projects",
+  "collectionName": "blogs",
   "info": {
-    "name": "project",
+    "name": "blog",
     "description": ""
   },
   "options": {
@@ -15,8 +15,8 @@
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text",
+    "content": {
+      "type": "richtext",
       "required": true
     },
     "image": {
@@ -30,22 +30,28 @@
       "plugin": "upload",
       "required": true
     },
-    "github": {
-      "type": "string",
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
       "required": true
     },
-    "url": {
-      "type": "string",
-      "private": false,
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "music",
+        "food",
+        "tech",
+        "lifestyle"
+      ],
+      "required": true,
+      "default": "music"
+    },
+    "description": {
+      "type": "text",
       "required": true
     },
-    "featured": {
-      "type": "boolean"
-    },
-    "stack": {
-      "type": "component",
-      "repeatable": true,
-      "component": "description.stack-item",
+    "data": {
+      "type": "date",
       "required": true
     }
   }
