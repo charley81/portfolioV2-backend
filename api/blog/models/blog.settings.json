@@ -50,7 +50,7 @@
       "type": "text",
       "required": true
     },
-    "data": {
+    "date": {
       "type": "date",
       "required": true
     }
